@@ -1,0 +1,62 @@
+.button
+  background: $white
+  width: fit-content
+  padding: 12px 72px 12px 24px
+  position: relative
+  color: $black
+  text-decoration: none
+  transition: .2s
+
+  &:hover
+    transiton: .2s
+    padding: 12px 100px 12px 24px
+    color: $black
+
+    &::after
+      content: ""
+      height: 2px
+      width: 58px
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      right: 22px
+      background: $black
+      transition: .2s
+
+    &::before
+      position: absolute
+      content: ""
+      width: 0px
+      height: 0px
+      border-top: 5px solid $black
+      border-right: 5px solid transparent
+      border-bottom: 5px solid transparent
+      border-left: 5px solid transparent
+      top: 50%
+      transform: translateY(-50%) rotate(-90deg)
+      transition: .2s
+
+  &::after
+    content: ""
+    height: 2px
+    width: 30px
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    right: 22px
+    background: $black
+    transition: .2s
+
+  &::before
+    position: absolute
+    content: ""
+    width: 0px
+    height: 0px
+    border-top: 5px solid $black
+    border-right: 5px solid transparent
+    border-bottom: 5px solid transparent
+    border-left: 5px solid transparent
+    top: 50%
+    transform: translateY(-50%) rotate(-90deg)
+    right: 12px
+    transition: .2s
