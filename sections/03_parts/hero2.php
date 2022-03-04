@@ -22,7 +22,7 @@ stroke-width: 5px;
   </div>
   <div class="container-fluid hero__image">
     <div class="row d-flex justify-content-center">
-      <div class="col-6">
+      <div class="col-xl-6 col-lg-8 col-12">
         <p class="text-center mx-auto">Lorem Ipsum dolor sit met ist nur ein Dummytext für Entwickler und Designer. Lorem Ipsum dolor sit met ist nur ein Dummytext für Entwickler und Designer.</p>
       </div>
     </div>
