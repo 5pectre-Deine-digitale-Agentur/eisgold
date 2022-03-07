@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*!
  * Theme Name: EISGOLD powered by 5pectre
  * Theme URI: https://5pectre.com/eisgold
@@ -21,8 +20,7 @@ html, body {
   font-weight: 300;
   font-size: 18px;
   color: #FFFFFF;
-  -ms-scroll-chaining: none;
-      overscroll-behavior: none;
+  overscroll-behavior: none;
   overflow-x: hidden;
   background-color: #000000 !important;
 }
@@ -30,8 +28,6 @@ html main, html footer, body main, body footer {
   width: 90%;
   margin: auto;
   max-width: 100vw;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   background: #000000;
 }
@@ -69,29 +65,12 @@ span, a, p {
   font-smoothing: grayscale;
 }
 
-@-webkit-keyframes dash {
-  from {
-    stroke-dashoffset: 1000;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
 @keyframes dash {
   from {
     stroke-dashoffset: 1000;
   }
   to {
     stroke-dashoffset: 0;
-  }
-}
-@-webkit-keyframes dash-reverse {
-  from {
-    stroke-dashoffset: 0;
-  }
-  to {
-    stroke-dashoffset: 1000;
   }
 }
 @keyframes dash-reverse {
@@ -102,16 +81,21 @@ span, a, p {
     stroke-dashoffset: 1000;
   }
 }
+@keyframes circle {
+  from {
+    stroke-dashoffset: 1200;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 .button {
   background: #FFFFFF;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   padding: 12px 72px 12px 24px;
   position: relative;
   color: #000000;
   text-decoration: none;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 .button:hover {
@@ -125,11 +109,9 @@ span, a, p {
   width: 58px;
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   right: 22px;
   background: #000000;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 .button:hover::before {
@@ -142,9 +124,7 @@ span, a, p {
   border-bottom: 5px solid transparent;
   border-left: 5px solid transparent;
   top: 50%;
-  -webkit-transform: translateY(-50%) rotate(-90deg);
-          transform: translateY(-50%) rotate(-90deg);
-  -webkit-transition: 0.2s;
+  transform: translateY(-50%) rotate(-90deg);
   transition: 0.2s;
 }
 .button::after {
@@ -153,11 +133,9 @@ span, a, p {
   width: 30px;
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   right: 22px;
   background: #000000;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 .button::before {
@@ -170,10 +148,8 @@ span, a, p {
   border-bottom: 5px solid transparent;
   border-left: 5px solid transparent;
   top: 50%;
-  -webkit-transform: translateY(-50%) rotate(-90deg);
-          transform: translateY(-50%) rotate(-90deg);
+  transform: translateY(-50%) rotate(-90deg);
   right: 12px;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
@@ -185,8 +161,7 @@ form input[type=search] {
   max-width: 300px;
   border-radius: 50px;
   border: none !important;
-  -webkit-box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.2);
-          box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.2);
   padding: 12px 24px;
   text-align: right;
 }
@@ -206,14 +181,13 @@ form button[type=submit] {
 form button[type=submit]::after {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  content: "";
+  content: "\f002";
   position: absolute;
   color: white;
   font-size: 16px;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 #navigation {
@@ -227,16 +201,9 @@ form button[type=submit]::after {
   margin: auto;
 }
 #navigation .container-fluid .row .nav-img-col {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 #navigation .container-fluid .row .nav-img-col .logo {
   max-height: 100%;
@@ -244,40 +211,22 @@ form button[type=submit]::after {
   margin-right: 100px;
 }
 #navigation .container-fluid .row .menu-item-col {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 #navigation .container-fluid .row .nav-icon-col {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   list-style: none;
   margin: 0;
   padding: 0;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 .menu ul {
   margin: 0;
@@ -296,8 +245,7 @@ form button[type=submit]::after {
 }
 
 #post {
-  -webkit-box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.2);
-          box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.2);
   margin-bottom: 50px;
   padding: 20px;
 }
@@ -341,8 +289,7 @@ form button[type=submit]::after {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: 100%;
   height: auto;
   opacity: 0.5;
@@ -351,8 +298,7 @@ form button[type=submit]::after {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: 50%;
   height: auto;
 }
@@ -362,18 +308,11 @@ form button[type=submit]::after {
 }
 
 #gallery {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
   width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  justify-content: center;
+  flex-flow: row wrap;
   gap: 5px;
 }
 #gallery .image__container {
@@ -387,11 +326,9 @@ form button[type=submit]::after {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: auto;
   height: 100%;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   z-index: 1;
 }
@@ -403,24 +340,20 @@ form button[type=submit]::after {
   text-align: left;
   border: none;
   outline: none;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 #accordeon .accordion h3 {
   font-family: futura;
 }
 #accordeon .active, #accordeon .accordion:hover {
-  -webkit-box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
-          box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
 }
 #accordeon .panel {
   padding: 0 18px;
   background-color: white;
   max-height: 0;
   overflow: hidden;
-  -webkit-box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
-          box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
-  -webkit-transition: max-height 0.2s ease-out;
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
   transition: max-height 0.2s ease-out;
 }
 
@@ -434,41 +367,24 @@ form button[type=submit]::after {
 
 #page-404 {
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
 }
 #page-404 .container .row {
   height: 100%;
 }
 #page-404 .container .row .col-12 {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #page-404 .container .row .col-12 .text-wrapper {
   text-align: center;
 }
 #page-404 .container .row .col-12 .text-wrapper .special {
-  background: -webkit-gradient(linear, left top, right top, from(#BF953F), color-stop(#FCF6BA), color-stop(#B38728), color-stop(#FBF5B7), to(#AA771C));
   background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -485,16 +401,9 @@ form button[type=submit]::after {
   background: #000000;
 }
 #footer .booking__container .links {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 #footer .menu i {
   color: #FFFFFF;
@@ -519,23 +428,13 @@ form button[type=submit]::after {
 }
 
 #hero {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   padding-top: 70px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   margin-bottom: 100px;
-  -webkit-box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.2);
-          box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.2);
   position: relative;
 }
 #hero .col-12 {
@@ -550,18 +449,15 @@ form button[type=submit]::after {
   color: #707070;
   font-size: 8vw;
   position: relative;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   cursor: pointer;
 }
 #hero h1 span:hover {
   color: #FFFFFF;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 #hero h1 span:hover svg {
-  -webkit-animation: dash 0.5s linear forwards;
-          animation: dash 0.5s linear forwards;
+  animation: dash 0.5s linear forwards;
 }
 #hero h1 span svg {
   width: 100%;
@@ -571,8 +467,7 @@ form button[type=submit]::after {
   left: 0;
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  -webkit-animation: dash-reverse 0.5s linear forwards;
-          animation: dash-reverse 0.5s linear forwards;
+  animation: dash-reverse 0.5s linear forwards;
 }
 #hero p {
   color: #FFFFFF;
@@ -618,8 +513,7 @@ form button[type=submit]::after {
   max-width: none;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 #hero .data__img {
   position: absolute;
@@ -638,23 +532,13 @@ form button[type=submit]::after {
 }
 
 #hero2 {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   padding-top: 70px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   margin-bottom: 100px;
-  -webkit-box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.2);
-          box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.2);
   position: relative;
 }
 #hero2 .col-12 {
@@ -666,8 +550,7 @@ form button[type=submit]::after {
   margin-bottom: 50px;
 }
 #hero2 h1 svg {
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   position: absolute;
   left: 50%;
 }
@@ -690,12 +573,10 @@ form button[type=submit]::after {
 }
 #topic .topic__container:hover .image__container {
   width: calc(100% - 30px);
-  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 #topic .topic__container.second {
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
+  transform: translateY(50%);
 }
 #topic .topic__container .image__container {
   margin: auto;
@@ -704,7 +585,6 @@ form button[type=submit]::after {
   padding-bottom: 133.3333%;
   overflow: hidden;
   max-height: 100vh;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
   position: relative;
 }
@@ -714,9 +594,7 @@ form button[type=submit]::after {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-transition: 0.2s;
+  transform: translate(-50%, -50%);
   transition: 0.2s;
 }
 #topic .topic__container .text__container {
@@ -767,18 +645,15 @@ form button[type=submit]::after {
   font-size: 4rem;
   margin-bottom: 50px;
   text-decoration: none;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
   position: relative;
 }
 #cta a:hover {
   color: #FFFFFF;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 #cta a:hover svg {
-  -webkit-animation: dash 0.5s linear forwards;
-          animation: dash 0.5s linear forwards;
+  animation: dash 0.5s linear forwards;
 }
 #cta a svg {
   width: 100%;
@@ -788,8 +663,7 @@ form button[type=submit]::after {
   left: 0;
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  -webkit-animation: dash-reverse 0.5s linear forwards;
-          animation: dash-reverse 0.5s linear forwards;
+  animation: dash-reverse 0.5s linear forwards;
 }
 
 #blog {
@@ -819,8 +693,7 @@ form button[type=submit]::after {
   left: auto;
 }
 #blog .splide .splide__arrows .splide__arrow.splide__arrow--prev svg {
-  -webkit-transform: scale(2.5) translateY(100%) rotate(180deg);
-          transform: scale(2.5) translateY(100%) rotate(180deg);
+  transform: scale(2.5) translateY(100%) rotate(180deg);
   opacity: 1;
 }
 #blog .splide .splide__arrows .splide__arrow.splide__arrow--prev svg .cls-1 {
@@ -832,15 +705,12 @@ form button[type=submit]::after {
   right: 0;
 }
 #blog .splide .splide__arrows .splide__arrow.splide__arrow--next svg {
-  -webkit-transform: scale(2.5) translateY(100%);
-          transform: scale(2.5) translateY(100%);
+  transform: scale(2.5) translateY(100%);
 }
 #blog .splide .splide__arrows .splide__arrow.splide__arrow--next svg .cls-1 {
   stroke: #FFFFFF;
 }
 #blog .splide__slide {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   padding: 0;
 }
@@ -855,8 +725,7 @@ form button[type=submit]::after {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: 100%;
   height: auto;
 }
@@ -880,4 +749,107 @@ form button[type=submit]::after {
 }
 #values h3 {
   color: white;
+}
+
+#hero3 {
+  height: fit-content;
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 100px;
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+#hero3 .col-12 {
+  position: relative;
+}
+#hero3 h1 {
+  color: #FFFFFF;
+  font-size: 8vw;
+  margin-bottom: 50px;
+}
+#hero3 h1 span {
+  color: #707070;
+  font-size: 8vw;
+  position: relative;
+  transition: 0.5s;
+  cursor: pointer;
+}
+#hero3 h1 span:hover {
+  color: #FFFFFF;
+  transition: 0.2s;
+}
+#hero3 h1 span:hover svg {
+  animation: circle 0.5s linear forwards;
+}
+#hero3 h1 span svg {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+}
+#hero3 p {
+  color: #FFFFFF;
+  font-size: 1.2rem;
+  margin-bottom: 50px;
+}
+#hero3 .hero__image .row {
+  height: 100%;
+}
+#hero3 .hero__image .row .sticky__container {
+  position: relative;
+}
+#hero3 .hero__image .row .sticky__container .sticky {
+  top: 15px;
+  position: sticky;
+}
+#hero3 .hero__image .row .sticky__container .orbit {
+  width: 100%;
+}
+#hero3 .hero__image .row .sticky__container .orbit .ball {
+  width: 80%;
+  height: 0;
+  padding-bottom: 80%;
+  background: #020024;
+  background: radial-gradient(farthest-corner at 30% 70%, black 0%, #faaf3a 100%);
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#hero3 .hero__image .row .sticky__container .image__container {
+  width: 100%;
+  height: 0;
+  padding-bottom: 133.333%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+#hero3 .hero__image .row .sticky__container .image__container img {
+  position: absolute;
+  height: 100%;
+  width: auto;
+  max-width: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#hero3 .data__img {
+  position: absolute;
+  width: 500px;
+  height: auto;
+  z-index: 0;
+  opacity: 0;
+}
+#hero3 .data__img.img1 {
+  top: 5%;
+  right: 10%;
+}
+#hero3 .data__img.img2 {
+  left: 10%;
+  bottom: 30%;
 }

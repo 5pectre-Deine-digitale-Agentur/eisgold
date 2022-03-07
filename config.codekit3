@@ -17,6 +17,14 @@
       "oAP" : "\/404.php",
       "oF" : 0
     },
+    "\/about.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/about.php",
+      "oF" : 0
+    },
     "\/ACF Exports\/content.json" : {
       "ft" : 524288,
       "oA" : 1,
@@ -56,6 +64,26 @@
       "oA" : 0,
       "oAP" : "\/archive.php",
       "oF" : 0
+    },
+    "\/contact.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/contact.php",
+      "oF" : 0
+    },
+    "\/css\/03_sections\/values.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/css\/03_sections\/values-min.css",
+      "oF" : 0,
+      "pg" : 0
     },
     "\/css\/404.css" : {
       "aP" : 1,
@@ -126,6 +154,18 @@
       "ma" : 0,
       "oA" : 0,
       "oAP" : "\/css\/slider-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/css\/style.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/css\/style-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -391,6 +431,19 @@
       "iS" : 940455,
       "oA" : 0,
       "oAP" : "\/img\/assets\/image5.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/img\/assets\/team.png" : {
+      "ft" : 32768,
+      "iS" : 1015736,
+      "oA" : 0,
+      "oAP" : "\/img\/assets\/team.png",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -25436,6 +25489,14 @@
       "oAP" : "\/page.php",
       "oF" : 0
     },
+    "\/prepros.config" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/prepros.config",
+      "oF" : 0
+    },
     "\/README.md" : {
       "cB" : 0,
       "cS" : 0,
@@ -25710,6 +25771,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/sass\/03_sections\/contact.sass" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 2,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/sass\/03_sections\/contact.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/sass\/03_sections\/hero.sass" : {
       "aP" : 0,
       "bl" : 0,
@@ -25720,6 +25796,36 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/sass\/03_sections\/hero.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/sass\/03_sections\/hero2.sass" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 2,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/sass\/03_sections\/hero2.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/sass\/03_sections\/values.sass" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 2,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/sass\/03_sections\/values.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
@@ -25841,6 +25947,14 @@
       "oAP" : "\/sections\/02_content\/wp_content.php",
       "oF" : 0
     },
+    "\/sections\/03_parts\/about.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/03_parts\/about.php",
+      "oF" : 0
+    },
     "\/sections\/03_parts\/body.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -25849,12 +25963,44 @@
       "oAP" : "\/sections\/03_parts\/body.php",
       "oF" : 0
     },
+    "\/sections\/03_parts\/contact.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/03_parts\/contact.php",
+      "oF" : 0
+    },
     "\/sections\/03_parts\/hero.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/sections\/03_parts\/hero.php",
+      "oF" : 0
+    },
+    "\/sections\/03_parts\/hero2.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/03_parts\/hero2.php",
+      "oF" : 0
+    },
+    "\/sections\/03_parts\/image.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/03_parts\/image.php",
+      "oF" : 0
+    },
+    "\/sections\/03_parts\/values.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/03_parts\/values.php",
       "oF" : 0
     },
     "\/sidebar.php" : {
@@ -25958,7 +26104,7 @@
   },
   "projectAttributes" : {
     "creationDate" : 667125417.519925,
-    "displayValue" : "EISGOLD",
+    "displayValue" : "eisgold",
     "displayValueWasSetByUser" : 0,
     "iconImageName" : "\/img\/icons\/favicons\/apple-touch-icon.png",
     "iconImageWasSetByUser" : 0
