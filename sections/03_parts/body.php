@@ -12,7 +12,7 @@
   <section id="topic">
     <div data-scroll data-scroll-speed="-1.5" class="container-fluid">
       <div class="row">
-        <div class="col-6">
+        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
           <div class="topic__container">
             <div class="image__container">
               <img class="topic__image" src="<?php echo get_template_directory_uri(); ?>/img/assets/image1.png" alt="">
@@ -23,7 +23,7 @@
             </div>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
           <div class="topic__container second">
             <div class="image__container">
               <img class="topic__image" src="<?php echo get_template_directory_uri(); ?>/img/assets/image2.png" alt="">
@@ -38,7 +38,7 @@
     </div>
     <div data-scroll data-scroll-speed="-1.5" class="container-fluid">
       <div class="row">
-        <div class="col-6">
+        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
           <div class="topic__container">
             <div class="image__container">
               <img class="topic__image" src="<?php echo get_template_directory_uri(); ?>/img/assets/image3.png" alt="">
@@ -49,7 +49,7 @@
             </div>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
           <div class="topic__container second">
             <div class="image__container">
               <img class="topic__image" src="<?php echo get_template_directory_uri(); ?>/img/assets/image4.png" alt="">
@@ -64,7 +64,7 @@
     </div>
     <div data-scroll data-scroll-speed="-1.5" class="container-fluid">
       <div class="row">
-        <div class="col-6">
+        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
           <div data-scroll class="topic__container">
             <div class="image__container">
               <img class="topic__image" src="<?php echo get_template_directory_uri(); ?>/img/assets/image5.png" alt="">
@@ -88,19 +88,19 @@
       </div>
       <div class="container-fluid">
         <div class="row">
-          <div class="col-4">
+          <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
             <div class="value__container">
               <h3>Hausgemachte Sorten</h3>
               <p>Lorem Ipsum dolor sit met ist nur ein Dummytext für Entwickler und Designer.</p>
             </div>
           </div>
-          <div class="col-4">
+          <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
             <div class="value__container">
               <h3>Hausgemachte Sorten</h3>
               <p>Lorem Ipsum dolor sit met ist nur ein Dummytext für Entwickler und Designer.</p>
             </div>
           </div>
-          <div class="col-4">
+          <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
             <div class="value__container">
               <h3>Hausgemachte Sorten</h3>
               <p>Lorem Ipsum dolor sit met ist nur ein Dummytext für Entwickler und Designer.</p>
@@ -140,8 +140,8 @@
     </div>
   </section>
 
-  <section data-scroll data-scroll-speed="0.5" id="blog">
-    <div class="splide">
+  <section data-scroll data-scroll-speed="0.5" id="blog" class="container-fluid">
+    <div class="splide row">
       <div class="title__container">
         <h2>Die neusten News + Updates</h2>
       </div>
@@ -184,7 +184,7 @@
 
         </button>
       </div>
-      <div class="splide__track">
+      <div class="splide__track col-12">
     		<ul class="splide__list">
     			<li class="splide__slide">
             <div class="image__container">
@@ -229,12 +229,23 @@
 
   <script type="text/javascript">
     var splide = new Splide( '.splide', {
-    perPage: 3,
+    perPage: 4,
     perMove: 1,
     gap: "30px",
     rewind : true,
     pagination: false,
     arrows: false,
+    breakpoints: {
+      992: {
+        perPage: 3,
+      },
+      576: {
+        perPage: 1,
+      },
+      300: {
+
+      }
+    },
     } );
 
     splide.mount();

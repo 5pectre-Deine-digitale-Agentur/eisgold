@@ -21,7 +21,7 @@ $footer_menu = wp_get_nav_menu_object( $footer_id );
         <div class="row">
           <div class="col-12">
             <h1 class="text-center">Wir würden
-              <span class="img__reveal">
+              <span class="img__reveal load__effect">
                 dich
                 <svg xmlns="http://www.w3.org/2000/svg" width="430.906" height="283.707" viewBox="0 0 430.906 283.707">
         <defs>
@@ -68,10 +68,10 @@ $footer_menu = wp_get_nav_menu_object( $footer_id );
     <section id="contact">
       <div class="container">
         <div class="row">
-          <div class="col-4">
+          <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 company__info">
             <?php if ( have_rows( 'company_info', $footer_menu ) ):
               while ( have_rows('company_info', $footer_menu ) ) : the_row(); ?>
-              <h5>KONTAKT</h5>
+              <h3>Kontakt</h3>
               <div class="information">
                 <?php $adress = get_sub_field('adress');
                 if ( !empty ( $adress ) ) {
@@ -94,16 +94,30 @@ $footer_menu = wp_get_nav_menu_object( $footer_id );
               <?php endwhile;
             endif; ?>
           </div>
-          <div class="col-8">
-            <h5>GET IN TOUCH</h5>
+          <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 form__container">
+            <h3>Get in Touch</h3>
             <h2>Schick uns ein paar Zeilen.</h2>
-            <span>Schicke uns eine Mail unter hello@eisgold.de oder melde dich kurz übers Formular bei uns</span>
+            <span>Schicke uns eine Mail unter <a href="mailto:hello@eisgold.de">hello@eisgold.de<svg xmlns="http://www.w3.org/2000/svg" width="590.379" height="27.3" viewBox="0 0 590.379 27.3"><defs><style>.a{fill:none;stroke:#faaf3a;stroke-width:3px;}</style></defs><path class="a" d="M2436.292,753.92l212.883-9.938s142.5-5.96,78.307,12.414,26.139,8.975,148.277,5.545,150.8-4.471,150.8-4.471" transform="translate(-2436.222 -741.516)"/></svg></a> oder melde dich kurz übers Formular bei uns</span>
+            <?php echo do_shortcode('[contact-form-7 id="29" title="Contact"]'); ?>
           </div>
         </div>
       </div>
     </section>
-
+    <section data-scroll data-scroll-speed="0.5" id="cta">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="call">Einfach mal schreiben</h1>
+              <a href="mailto:hello@eisgold.com">hello@eisgold.com<svg xmlns="http://www.w3.org/2000/svg" width="590.379" height="27.3" viewBox="0 0 590.379 27.3"><defs><style>.a{fill:none;stroke:#faaf3a;stroke-width:3px;}</style></defs><path class="a" d="M2436.292,753.92l212.883-9.938s142.5-5.96,78.307,12.414,26.139,8.975,148.277,5.545,150.8-4.471,150.8-4.471" transform="translate(-2436.222 -741.516)"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <script type="text/javascript">
+        window.addEventListener("load", ()=>{
+          document.querySelector('.load__effect').classList.add('active');
+        })
+      </script>
     <?php get_footer(); ?>
-
   </div>
 </main>

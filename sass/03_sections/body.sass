@@ -1,14 +1,21 @@
 #mission
+  margin-bottom: 150px
+
   h2
     color: $white
-    font-size: 4rem
+    font-size: 7vw
     text-align: center
 
 #topic
+  margin-bottom: 150px
   .topic__container
+
     cursor: pointer
     max-width: 600px
     margin: 150px auto
+
+    @include lg
+      margin-bottom: 0
 
     &:hover
       .image__container
@@ -17,6 +24,9 @@
 
     &.second
       transform: translateY(50%)
+
+      @include lg
+        transform: translateY(0)
 
     .image__container
       margin: auto
@@ -50,7 +60,7 @@
 #values
   h2
     color: $white
-    font-size: 4rem
+    font-size: 10vw
     padding-bottom: 100px
 
   .value__container
@@ -63,8 +73,13 @@
 
 #video
   margin-bottom: 150px
+
   .pointer__container
     margin-top: 50px
+
+    svg
+      max-width: 90%
+
   .video__container
     margin-top: 50px
     width: 100%
@@ -74,13 +89,14 @@
       height: auto
 
 #cta
+  margin-bottom: 150px
   h2
     color: $white
-    font-size: 4rem
+    font-size: 7vw
 
   a
     color: $color2
-    font-size: 4rem
+    font-size: 7vw
     margin-bottom: 50px
     text-decoration: none
     transition: .2s
@@ -95,7 +111,7 @@
 
     svg
       width: 100%
-      height: 30px
+      height: 60px
       position: absolute
       top: 100%
       left: 0
@@ -105,13 +121,20 @@
 
 #blog
   margin-bottom: 150px
+
   .splide
     position: relative
+
     .title__container
+      max-width: 80%
+
       h2
         color: $white
-        font-size: 4rem
+        font-size: 7vw
         padding-bottom: 100px
+
+        @include lg
+          padding-bottom: 50px
 
     .splide__arrows
 
@@ -126,7 +149,7 @@
 
         &.splide__arrow--prev
           height: 4rem
-          top: 0
+          top: 220px
           right: 5rem !important
           left: auto
 
@@ -139,7 +162,7 @@
 
         &.splide__arrow--next
           height: 4rem
-          top: 0
+          top: 220px
           right: 0
 
           svg

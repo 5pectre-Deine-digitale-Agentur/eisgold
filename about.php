@@ -17,6 +17,7 @@ get_header(); ?>
       include 'sections/03_parts/image.php';
       include 'sections/03_parts/about.php';
       include 'sections/03_parts/values.php';
+      include 'sections/03_parts/chance.php';
       include 'sections/03_parts/contact.php';
       ?>
     <?php get_footer(); ?>

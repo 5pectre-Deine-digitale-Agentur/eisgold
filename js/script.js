@@ -28,3 +28,7 @@
 	});
 
 } ( this, jQuery ));
+
+document.addEventListener("load", () => {
+	document.querySelector('h1 svg').classList.add('animate');
+})

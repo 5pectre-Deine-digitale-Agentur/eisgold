@@ -35,13 +35,13 @@
   </div>
   <div class="container-fluid hero__image">
     <div class="row">
-      <div class="col-6">
+      <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
         <p>Lorem Ipsum dolor sit met ist nur ein Dummytext für Entwickler und Designer. Lorem Ipsum dolor sit met ist nur ein Dummytext für Entwickler und Designer.</p>
         <a href="#" class="button">
           <span>Erfahre Mehr</span>
         </a>
       </div>
-      <div class="col-6 sticky__container">
+      <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 sticky__container">
         <div class="orbit">
           <div class="ball"></div>
         </div>

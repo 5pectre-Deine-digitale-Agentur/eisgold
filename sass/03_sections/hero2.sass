@@ -8,6 +8,9 @@
   box-shadow: $shadow
   position: relative
 
+  @include lg
+    margin-bottom: 50px
+
   .col-12
     position: relative
 
@@ -15,11 +18,28 @@
     color: $white
     font-size: 8vw
     margin-bottom: 50px
+    z-index: 0
+
+    &.load__effect
+      z-index: 3
+      position: relative
+
+    &.active
+        svg
+          animation: circle .5s linear forwards
 
     svg
       transform: translate(-50%, -50%)
       position: absolute
       left: 50%
+      width: 50%
+      stroke-dasharray: 1200
+      stroke-dashoffset: 1200
+      z-index: -1
+      // animation: dash-reverse .5s linear forwards
+
+    .animate
+      animation: dash .5s linear forwards
 
   p
     color: $white

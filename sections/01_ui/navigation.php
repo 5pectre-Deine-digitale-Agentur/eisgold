@@ -7,7 +7,7 @@ $menu = wp_get_nav_menu_object( 2 );
 <section data-scroll id="navigation">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-xxl-8 col-lg-8 col-md-8 col-sm-8 col-xs-8 menu-item-col ninja d-flex">
+        <div class="col-xxl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12 col-12 menu-item-col ninja d-flex">
           <div class="nav-img-col">
             <?php if ( !empty(get_field('logo', $menu))):
               $logo = get_field('logo', $menu);

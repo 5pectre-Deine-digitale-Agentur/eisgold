@@ -6,11 +6,11 @@ $footer_menu = wp_get_nav_menu_object( $footer_id );
 <footer data-scroll id="footer">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-4">
+				<div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 footer__col">
 					<h5>Folge uns:</h5>
 					<?php wp_nav_menu(array( 'theme_location' => 'extra' )); ?>
 				</div>
-				<div class="col-4">
+				<div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 footer__col">
 					<div class="sitemap">
 						<h5>Besuche uns</h5>
 						<?php if ( have_rows( 'company_info', $footer_menu ) ):
@@ -27,7 +27,7 @@ $footer_menu = wp_get_nav_menu_object( $footer_id );
 						endif; ?>
 					</div>
 				</div>
-				<div class="col-4">
+				<div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 footer__col">
 					<div class="booking__container">
 						<?php if ( have_rows( 'company_info', $footer_menu ) ):
 							while ( have_rows('company_info', $footer_menu ) ) : the_row(); ?>
