@@ -11,7 +11,7 @@ $footer = get_term_by('name', 'footer', 'nav_menu');
 $footer_id = $footer->term_id;
 $footer_menu = wp_get_nav_menu_object( $footer_id );
 ?>
-
+<?php include 'sections/01_ui/mobile__nav.php'; ?>
 <main data-scroll-container role="main">
   <div data-scroll-section class="">
 
@@ -42,7 +42,7 @@ $footer_menu = wp_get_nav_menu_object( $footer_id );
       </div>
       <div class="container-fluid hero__image">
         <div class="row d-flex justify-content-center">
-          <div class="col-6">
+          <div class="col-xxl-6 col-xl-6 col-lg-8 col-md-12 col-sm-12 col-12">
             <p class="text-center mx-auto">Lorem Ipsum dolor sit met ist nur ein Dummytext für Entwickler und Designer. Lorem Ipsum dolor sit met ist nur ein Dummytext für Entwickler und Designer.</p>
           </div>
         </div>
@@ -50,7 +50,7 @@ $footer_menu = wp_get_nav_menu_object( $footer_id );
     </section>
 
     <section id="image" data-scroll>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
                     <img class="w-100" src="<?php echo get_template_directory_uri(); ?>/img/assets/team.png" alt="">
@@ -67,7 +67,7 @@ $footer_menu = wp_get_nav_menu_object( $footer_id );
 
     <section id="contact">
       <div class="container">
-        <div class="row">
+        <div class="row flex-column-reverse flex-lg-row">
           <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 company__info">
             <?php if ( have_rows( 'company_info', $footer_menu ) ):
               while ( have_rows('company_info', $footer_menu ) ) : the_row(); ?>

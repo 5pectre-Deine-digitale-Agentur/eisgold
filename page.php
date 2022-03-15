@@ -7,9 +7,11 @@
 
 */
 get_header(); ?>
+<?php include 'sections/01_ui/mobile__nav.php'; ?>
+<main data-scroll-container role="main">
+  <div data-scroll-section>
 
-<?php
-  include 'loop.php';
-?>
+  <?php include 'sections/01_ui/navigation.php'; ?>
+  <?php include 'sections/01_ui/pagebuild.php';?>
 
-<?php get_footer(); ?>
+  <?php get_footer(); ?>

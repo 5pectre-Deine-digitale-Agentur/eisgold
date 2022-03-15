@@ -14,8 +14,11 @@
       flex-direction: column
       justify-content: flex-start
 
-  .menu i
-    color: $white
+  .menu
+    .menu-item, .page-item
+
+      &:first-child
+        margin-left: 0
 
   h5
     color: $white
@@ -23,9 +26,37 @@
   span, a, p
     color: $color2
     text-decoration: none
+    transition: .2s
+
+  a:hover
+    color: $white
+    transition: .2s
 
   .copy
     margin-top: 50px
+    @include lg
+      margin-bottom: 30px
+
+    .copy__container
+      display: flex
+      flex-direction: row
+      justify-content: flex-start
+
+      @include lg
+        flex-direction: column
+
+      .menu
+        @include lg
+          display: flex
+          flex-direction: column
+          align-items: flex-start
+
+        .menu-item, .page-item
+          @include lg
+            margin: 0
+
+          &:first-child
+            margin-left: 0
 
     p.copyright
       color: $color2

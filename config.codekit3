@@ -25493,6 +25493,14 @@
       "oAP" : "\/languages\/ro_RO.po",
       "oF" : 0
     },
+    "\/legal.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/legal.php",
+      "oF" : 0
+    },
     "\/page.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -25909,6 +25917,14 @@
       "oAP" : "\/sections\/01_ui\/button.php",
       "oF" : 0
     },
+    "\/sections\/01_ui\/mobile__nav.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/01_ui\/mobile__nav.php",
+      "oF" : 0
+    },
     "\/sections\/01_ui\/navigation.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -25941,36 +25957,12 @@
       "oAP" : "\/sections\/01_ui\/styles.php",
       "oF" : 0
     },
-    "\/sections\/02_content\/accordeon.php" : {
+    "\/sections\/02_content\/image.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/sections\/02_content\/accordeon.php",
-      "oF" : 0
-    },
-    "\/sections\/02_content\/code.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/02_content\/code.php",
-      "oF" : 0
-    },
-    "\/sections\/02_content\/gallery.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/02_content\/gallery.php",
-      "oF" : 0
-    },
-    "\/sections\/02_content\/slider.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/02_content\/slider.php",
+      "oAP" : "\/sections\/02_content\/image.php",
       "oF" : 0
     },
     "\/sections\/02_content\/text_content.php" : {
@@ -25979,6 +25971,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/sections\/02_content\/text_content.php",
+      "oF" : 0
+    },
+    "\/sections\/02_content\/video.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/02_content\/video.php",
       "oF" : 0
     },
     "\/sections\/02_content\/wp_content.php" : {
@@ -26037,12 +26037,36 @@
       "oAP" : "\/sections\/03_parts\/hero2.php",
       "oF" : 0
     },
-    "\/sections\/03_parts\/image.php" : {
+    "\/sections\/03_parts\/icons.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/sections\/03_parts\/image.php",
+      "oAP" : "\/sections\/03_parts\/icons.php",
+      "oF" : 0
+    },
+    "\/sections\/03_parts\/mission.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/03_parts\/mission.php",
+      "oF" : 0
+    },
+    "\/sections\/03_parts\/news.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/03_parts\/news.php",
+      "oF" : 0
+    },
+    "\/sections\/03_parts\/topics.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/03_parts\/topics.php",
       "oF" : 0
     },
     "\/sections\/03_parts\/values.php" : {
@@ -26051,6 +26075,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/sections\/03_parts\/values.php",
+      "oF" : 0
+    },
+    "\/sections\/03_parts\/video.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/03_parts\/video.php",
       "oF" : 0
     },
     "\/sidebar.php" : {

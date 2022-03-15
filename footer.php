@@ -55,10 +55,11 @@ $footer_menu = wp_get_nav_menu_object( $footer_id );
 		<div class="wrapper">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-12">
+					<div class="col-12 copy__container">
 						<p class="copyright">
-							&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'Spectreblank'); ?> <a href="https://5pectre.com" title="Spectre Blank">5pectre</a>.
+							&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'Spectreblank'); ?> <a href="https://5pectre.com" title="Spectre Blank">5pectre</a>   |
 						</p>
+						<?php wp_nav_menu(array( 'theme_location' => 'footer' )); ?>
 					</div>
 				</div>
 			</div>
@@ -66,24 +67,10 @@ $footer_menu = wp_get_nav_menu_object( $footer_id );
 	</div>
 </footer>
 
-<script>
-	const scroll = new LocomotiveScroll({
-	    el: document.querySelector('[data-scroll-container]'),
-	    smooth: true
-	});
-</script>
+</div>
+</main>
 
 <?php wp_footer(); ?>
-
-<!-- analytics -->
-<script>
-(function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){
-(f[s].q=f[s].q||[]).push(arguments)},f[s].l=1*new Date();h=i.createElement(r),
-l=i.getElementsByTagName(r)[0];h.async=1;h.src=e;l.parentNode.insertBefore(h,l)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-XXXXXXXX-XX', 'yourdomain.com');
-ga('send', 'pageview');
-</script>
 
 </body>
 </html>

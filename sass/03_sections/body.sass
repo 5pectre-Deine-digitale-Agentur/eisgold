@@ -6,10 +6,14 @@
     font-size: 7vw
     text-align: center
 
+    @include lg
+      font-size: 10vw
+
 #topic
   margin-bottom: 150px
-  .topic__container
 
+  .topic__container
+    display: block
     cursor: pointer
     max-width: 600px
     margin: 150px auto
@@ -63,6 +67,9 @@
     font-size: 10vw
     padding-bottom: 100px
 
+    @include lg
+      font-size: 12vw
+
   .value__container
     h3
       color: $white
@@ -84,7 +91,7 @@
     margin-top: 50px
     width: 100%
 
-    img
+    video
       width: 100%
       height: auto
 
@@ -153,9 +160,16 @@
           right: 5rem !important
           left: auto
 
+          @include lg
+            right: 3rem !important
+            top: 0
+
           svg
             transform: scale(2.5) translateY(100%) rotate(180deg)
             opacity: 1
+
+            @include lg
+              transform: scale(1.5) rotate(180deg) translateY(-50%)
 
             .cls-1
               stroke: $white
@@ -165,8 +179,14 @@
           top: 220px
           right: 0
 
+          @include lg
+            top: 0
+
           svg
             transform: scale(2.5) translateY(100%)
+
+            @include lg
+              transform: scale(1.5) translateY(50%)
 
             .cls-1
               stroke: $white
@@ -200,3 +220,6 @@
       .desc
         color: $white
         word-wrap: break-word
+
+#text__content
+  margin-bottom: 300px

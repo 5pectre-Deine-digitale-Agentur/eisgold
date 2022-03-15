@@ -12,14 +12,16 @@
 
 */
 get_header(); ?>
-<main data-scroll-container role="main">
-  <div data-scroll-section class="">
+<?php include 'sections/01_ui/mobile__nav.php'; ?>
+<main data-scroll-container role="main" id="fixed__target">
+  <div data-scroll-section>
     <?php include 'sections/01_ui/navigation.php'; ?>
     <?php include 'sections/01_ui/styles.php'; ?>
     <?php include 'sections/03_parts/hero.php'; ?>
-    <?php include 'sections/03_parts/body.php'; ?>
+    <?php include 'sections/03_parts/mission.php'; ?>
+    <?php include 'sections/03_parts/topics.php'; ?>
+    <?php include 'sections/03_parts/values.php'; ?>
+    <?php include 'sections/03_parts/video.php'; ?>
+    <?php include 'sections/03_parts/news.php'; ?>
     <?php include 'sections/03_parts/contact.php'; ?>
-    <?php get_footer(); ?>
-
-  </div>
-</main>
+<?php get_footer(); ?>

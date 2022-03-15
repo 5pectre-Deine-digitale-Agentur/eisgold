@@ -8,15 +8,11 @@
 */
 
 get_header(); ?>
+<?php include 'sections/01_ui/mobile__nav.php'; ?>
+<main data-scroll-container role="main">
+  <div data-scroll-section>
 
-<main role="main">
-	<?php
-	include 'sections/03_parts/hero.php';
-	include 'sections/02_content/wp_content.php';
-	include 'sections/01_ui/pagebuild.php';
-	?>
-</main>
+  <?php include 'sections/01_ui/navigation.php'; ?>
+  <?php include 'sections/01_ui/pagebuild.php';?>
 
-<?php //get_sidebar(); ?>
-
-<?php get_footer(); ?>
+  <?php get_footer(); ?>

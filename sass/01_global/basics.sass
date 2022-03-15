@@ -12,6 +12,11 @@ html, body
   overflow-x: hidden
   background-color: $black !important
 
+  main
+    opacity: 0
+    transition: .5s
+    transform: translateY(30px)
+
   main, footer
     width: 90%
     margin: auto
@@ -22,6 +27,7 @@ html, body
 h1,h2,h3,h4,h5,h6
   font-family: $heading
   font-weight: bold
+  color: $white
 
   &.h1
     font-size: 72pt
@@ -49,6 +55,4 @@ span, a, p
   font-family: $regular
   font-smoothing: antialiased
   font-smoothing: grayscale
-
-.bg-grey
-  background-color: #101010
+  color: $color2

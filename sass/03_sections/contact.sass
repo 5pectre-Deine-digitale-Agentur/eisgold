@@ -8,6 +8,9 @@
   box-shadow: $shadow
   position: relative
 
+  @include lg
+    margin-top: 100px
+
   .col-12
     position: relative
 
@@ -72,10 +75,16 @@
 #contact
   margin-bottom: 150px
   .company__info
+    @include lg
+      margin-bottom: 50px
+
     h3
       color: $white
       margin-bottom: 35px
       text-transform: uppercase
+
+      @include lg
+        font-size: 4vw
 
     p
       color: $color2
@@ -94,14 +103,23 @@
 
 
   .form__container
+    @include lg
+      margin-bottom: 50px
     h3
       color: $white
       margin-bottom: 35px
       text-transform: uppercase
 
+      @include lg
+        font-size: 4vw
+
     h2
       color: $white
       font-size: 3vw
+      margin-bottom: 35px
+
+      @include lg
+        font-size: 8vw
 
     span
       color: $color2

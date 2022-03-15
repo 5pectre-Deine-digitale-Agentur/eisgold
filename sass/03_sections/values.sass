@@ -1,19 +1,49 @@
 #icons
     margin-bottom: 150px
 
-    img
+    .icon
+      margin-bottom: 50px
+
+      .icon__container
+        position: relative
+        width: 100px
         height: 100px
+        border-radius: 100%
+        border: 3px solid $white
+        margin-bottom: 30px
+
+        @include lg
+          margin: auto
+          text-align: center
+          margin-bottom: 30px
+
+        img
+          height: 70%
+          width: auto
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translate(-50%,-50%)
 
     h3
-        color: white
+      color: white
+      @include lg
+        text-align: center
 
     h2
       color: $white
 
       &.title
         font-size: 3vw
+
         @include lg
+          font-size: 12vw
           text-align: center
+          margin-bottom:  50px
 
     p
       color: $color2
+
+      @include lg
+        text-align: center
+        

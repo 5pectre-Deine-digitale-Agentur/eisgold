@@ -24,6 +24,11 @@ html, body {
   overflow-x: hidden;
   background-color: #000000 !important;
 }
+html main, body main {
+  opacity: 0;
+  transition: 0.5s;
+  transform: translateY(30px);
+}
 html main, html footer, body main, body footer {
   width: 90%;
   margin: auto;
@@ -35,6 +40,7 @@ html main, html footer, body main, body footer {
 h1, h2, h3, h4, h5, h6 {
   font-family: futura;
   font-weight: bold;
+  color: #FFFFFF;
 }
 h1.h1, h2.h1, h3.h1, h4.h1, h5.h1, h6.h1 {
   font-size: 72pt;
@@ -63,10 +69,7 @@ span, a, p {
   font-family: futura;
   font-smoothing: antialiased;
   font-smoothing: grayscale;
-}
-
-.bg-grey {
-  background-color: #101010;
+  color: #707070;
 }
 
 @keyframes dash {
@@ -222,7 +225,6 @@ form button[type=submit] {
   padding: 0;
   margin: 0;
   border-radius: 50px;
-  margin: 0 !important;
 }
 form button[type=submit]::after {
   font-family: "Font Awesome 5 Free";
@@ -241,6 +243,11 @@ form button[type=submit]::after {
   padding: 20px 0;
   background: none;
   color: white;
+}
+@media (max-width: 992px) {
+  #navigation {
+    display: none;
+  }
 }
 #navigation .container-fluid {
   width: 90%;
@@ -309,6 +316,120 @@ form button[type=submit]::after {
 .menu .menu-item a, .menu .page_item a {
   color: inherit;
   text-decoration: none;
+}
+
+#mobile__navigation {
+  width: 90%;
+  z-index: 110;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+@media (max-width: 992px) {
+  #mobile__navigation {
+    display: block;
+  }
+}
+#mobile__navigation .container-fluid {
+  width: 90%;
+  margin: auto;
+  padding: 0;
+}
+#mobile__navigation .container-fluid .row .nav-img-col {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+#mobile__navigation .container-fluid .row .nav-img-col .logo {
+  max-height: 100%;
+  height: 100px;
+  margin-right: 100px;
+}
+#mobile__navigation .container-fluid .row .nav-icon-col {
+  justify-content: flex-end;
+  align-items: center;
+}
+#mobile__navigation .burger {
+  background: none;
+  outline: none;
+  border: none;
+  position: relative;
+  width: 22px;
+  height: 10px;
+  padding: 10px 10px;
+  box-sizing: content-box;
+}
+#mobile__navigation .burger::before, #mobile__navigation .burger::after {
+  content: "";
+  width: 22px;
+  height: 2px;
+  background: #FAAF3A;
+  display: block;
+  position: absolute;
+  border-radius: 1px;
+  transition: transform 0.2s ease, top 0.2s ease 0.1s;
+}
+#mobile__navigation .burger::before {
+  top: 15px;
+}
+#mobile__navigation .burger::after {
+  top: calc(100% - 20px);
+}
+#mobile__navigation .burger.open::before, #mobile__navigation .burger.open::after {
+  transition: top 0.2s ease, transform 0.2s ease 0.1s;
+  top: calc(50% - 1px);
+}
+#mobile__navigation .burger.open::before {
+  transform: rotate(45deg);
+}
+#mobile__navigation .burger.open::after {
+  transform: rotate(-45deg);
+}
+
+#nav__items {
+  width: 100%;
+  height: 100vh;
+  background: black;
+  background: linear-gradient(180deg, black 80%, rgba(250, 175, 58, 0) 100%);
+  z-index: 100;
+  position: fixed;
+  top: -100vh;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+@media (max-width: 992px) {
+  #nav__items {
+    display: flex;
+  }
+}
+#nav__items.active {
+  top: 0;
+}
+#nav__items .nav-item__container #menu-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+#nav__items .nav-item__container #menu-header .menu-item a {
+  font-size: 12vw;
+  color: #FFFFFF;
+}
+#nav__items .nav-item__container #menu-header .menu-item.current-menu-item {
+  position: relative;
+}
+#nav__items .nav-item__container #menu-header .menu-item.current-menu-item svg {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
 }
 
 #post {
@@ -477,8 +598,8 @@ form button[type=submit]::after {
   flex-direction: column;
   justify-content: flex-start;
 }
-#footer .menu i {
-  color: #FFFFFF;
+#footer .menu .menu-item:first-child, #footer .menu .page-item:first-child {
+  margin-left: 0;
 }
 #footer h5 {
   color: #FFFFFF;
@@ -486,9 +607,44 @@ form button[type=submit]::after {
 #footer span, #footer a, #footer p {
   color: #707070;
   text-decoration: none;
+  transition: 0.2s;
+}
+#footer a:hover {
+  color: #FFFFFF;
+  transition: 0.2s;
 }
 #footer .copy {
   margin-top: 50px;
+}
+@media (max-width: 992px) {
+  #footer .copy {
+    margin-bottom: 30px;
+  }
+}
+#footer .copy .copy__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+@media (max-width: 992px) {
+  #footer .copy .copy__container {
+    flex-direction: column;
+  }
+}
+@media (max-width: 992px) {
+  #footer .copy .copy__container .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 992px) {
+  #footer .copy .copy__container .menu .menu-item, #footer .copy .copy__container .menu .page-item {
+    margin: 0;
+  }
+}
+#footer .copy .copy__container .menu .menu-item:first-child, #footer .copy .copy__container .menu .page-item:first-child {
+  margin-left: 0;
 }
 #footer .copy p.copyright {
   color: #707070;
@@ -508,6 +664,11 @@ form button[type=submit]::after {
   margin-bottom: 100px;
   box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.2);
   position: relative;
+}
+@media (max-width: 992px) {
+  #hero {
+    margin-top: 100px;
+  }
 }
 #hero .col-12 {
   position: relative;
@@ -536,6 +697,13 @@ form button[type=submit]::after {
 #hero h1 span:hover svg {
   animation: dash 0.5s linear forwards;
 }
+#hero h1 span.active {
+  color: #FFFFFF;
+  transition: 0.2s;
+}
+#hero h1 span.active svg {
+  animation: dash 0.5s linear forwards;
+}
 #hero h1 span svg {
   width: 100%;
   height: 30px;
@@ -550,9 +718,6 @@ form button[type=submit]::after {
   color: #FFFFFF;
   font-size: 1.2rem;
   margin-bottom: 50px;
-}
-#hero .hero__image .row {
-  height: 100%;
 }
 #hero .hero__image .row .sticky__container {
   position: relative;
@@ -585,19 +750,20 @@ form button[type=submit]::after {
 #hero .hero__image .row .sticky__container .image__container {
   width: 100%;
   height: 0;
-  padding-bottom: 133.333%;
   height: auto;
   overflow: hidden;
   position: relative;
 }
 #hero .hero__image .row .sticky__container .image__container img {
-  position: absolute;
-  height: 100%;
-  width: auto;
-  max-width: none;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+}
+@media (max-width: 992px) {
+  #hero .hero__image .row .sticky__container .image__container img {
+    margin-top: 100px;
+  }
 }
 #hero .data__img {
   position: absolute;
@@ -648,6 +814,7 @@ form button[type=submit]::after {
 @media (max-width: 992px) {
   #hero2 {
     margin-bottom: 50px;
+    margin-top: 100px;
   }
 }
 #hero2 .col-12 {
@@ -658,6 +825,12 @@ form button[type=submit]::after {
   font-size: 8vw;
   margin-bottom: 50px;
   z-index: 0;
+}
+@media (max-width: 992px) {
+  #hero2 h1 {
+    font-size: 12vw;
+    margin-bottom: 30px;
+  }
 }
 #hero2 h1.load__effect {
   z-index: 3;
@@ -692,11 +865,17 @@ form button[type=submit]::after {
   font-size: 7vw;
   text-align: center;
 }
+@media (max-width: 992px) {
+  #mission h2 {
+    font-size: 10vw;
+  }
+}
 
 #topic {
   margin-bottom: 150px;
 }
 #topic .topic__container {
+  display: block;
   cursor: pointer;
   max-width: 600px;
   margin: 150px auto;
@@ -753,6 +932,11 @@ form button[type=submit]::after {
   font-size: 10vw;
   padding-bottom: 100px;
 }
+@media (max-width: 992px) {
+  #values h2 {
+    font-size: 12vw;
+  }
+}
 #values .value__container h3 {
   color: #FFFFFF;
   margin-bottom: 35px;
@@ -774,7 +958,7 @@ form button[type=submit]::after {
   margin-top: 50px;
   width: 100%;
 }
-#video .video__container img {
+#video .video__container video {
   width: 100%;
   height: auto;
 }
@@ -846,9 +1030,20 @@ form button[type=submit]::after {
   right: 5rem !important;
   left: auto;
 }
+@media (max-width: 992px) {
+  #blog .splide .splide__arrows .splide__arrow.splide__arrow--prev {
+    right: 3rem !important;
+    top: 0;
+  }
+}
 #blog .splide .splide__arrows .splide__arrow.splide__arrow--prev svg {
   transform: scale(2.5) translateY(100%) rotate(180deg);
   opacity: 1;
+}
+@media (max-width: 992px) {
+  #blog .splide .splide__arrows .splide__arrow.splide__arrow--prev svg {
+    transform: scale(1.5) rotate(180deg) translateY(-50%);
+  }
 }
 #blog .splide .splide__arrows .splide__arrow.splide__arrow--prev svg .cls-1 {
   stroke: #FFFFFF;
@@ -858,8 +1053,18 @@ form button[type=submit]::after {
   top: 220px;
   right: 0;
 }
+@media (max-width: 992px) {
+  #blog .splide .splide__arrows .splide__arrow.splide__arrow--next {
+    top: 0;
+  }
+}
 #blog .splide .splide__arrows .splide__arrow.splide__arrow--next svg {
   transform: scale(2.5) translateY(100%);
+}
+@media (max-width: 992px) {
+  #blog .splide .splide__arrows .splide__arrow.splide__arrow--next svg {
+    transform: scale(1.5) translateY(50%);
+  }
 }
 #blog .splide .splide__arrows .splide__arrow.splide__arrow--next svg .cls-1 {
   stroke: #FFFFFF;
@@ -895,14 +1100,46 @@ form button[type=submit]::after {
   word-wrap: break-word;
 }
 
+#text__content {
+  margin-bottom: 300px;
+}
+
 #icons {
   margin-bottom: 150px;
 }
-#icons img {
+#icons .icon {
+  margin-bottom: 50px;
+}
+#icons .icon .icon__container {
+  position: relative;
+  width: 100px;
   height: 100px;
+  border-radius: 100%;
+  border: 3px solid #FFFFFF;
+  margin-bottom: 30px;
+}
+@media (max-width: 992px) {
+  #icons .icon .icon__container {
+    margin: auto;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+#icons .icon .icon__container img {
+  height: 70%;
+  width: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 #icons h3 {
   color: white;
+}
+@media (max-width: 992px) {
+  #icons h3 {
+    text-align: center;
+  }
 }
 #icons h2 {
   color: #FFFFFF;
@@ -912,11 +1149,18 @@ form button[type=submit]::after {
 }
 @media (max-width: 992px) {
   #icons h2.title {
+    font-size: 12vw;
     text-align: center;
+    margin-bottom: 50px;
   }
 }
 #icons p {
   color: #707070;
+}
+@media (max-width: 992px) {
+  #icons p {
+    text-align: center;
+  }
 }
 
 #chance {
@@ -928,10 +1172,20 @@ form button[type=submit]::after {
 #chance h3 {
   margin-bottom: 0px;
 }
+#chance h2 {
+  font-size: 3vw;
+  margin-bottom: 50px;
+}
+@media (max-width: 992px) {
+  #chance h2 {
+    font-size: 10vw;
+  }
+}
 #chance a {
   margin-top: 30px;
 }
 #chance .bg-grey {
+  background: #0D0D0D;
   transition: 0.2s;
 }
 #chance .bg-grey h3, #chance .bg-grey svg {
@@ -969,7 +1223,6 @@ form button[type=submit]::after {
   }
 }
 #history .topic__container {
-  cursor: pointer;
   width: 100%;
   margin: 150px auto;
 }
@@ -982,10 +1235,6 @@ form button[type=submit]::after {
   #history .topic__container {
     margin: 50px auto;
   }
-}
-#history .topic__container:hover .image__container {
-  width: calc(100% - 30px);
-  transition: 0.2s;
 }
 #history .topic__container.second {
   transform: translateY(300px);
@@ -1039,6 +1288,11 @@ form button[type=submit]::after {
   margin-bottom: 100px;
   box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.2);
   position: relative;
+}
+@media (max-width: 992px) {
+  #hero3 {
+    margin-top: 100px;
+  }
 }
 #hero3 .col-12 {
   position: relative;
@@ -1103,10 +1357,20 @@ form button[type=submit]::after {
 #contact {
   margin-bottom: 150px;
 }
+@media (max-width: 992px) {
+  #contact .company__info {
+    margin-bottom: 50px;
+  }
+}
 #contact .company__info h3 {
   color: #FFFFFF;
   margin-bottom: 35px;
   text-transform: uppercase;
+}
+@media (max-width: 992px) {
+  #contact .company__info h3 {
+    font-size: 4vw;
+  }
 }
 #contact .company__info p {
   color: #707070;
@@ -1123,14 +1387,30 @@ form button[type=submit]::after {
   color: #FFFFFF;
   transition: 0.2s;
 }
+@media (max-width: 992px) {
+  #contact .form__container {
+    margin-bottom: 50px;
+  }
+}
 #contact .form__container h3 {
   color: #FFFFFF;
   margin-bottom: 35px;
   text-transform: uppercase;
 }
+@media (max-width: 992px) {
+  #contact .form__container h3 {
+    font-size: 4vw;
+  }
+}
 #contact .form__container h2 {
   color: #FFFFFF;
   font-size: 3vw;
+  margin-bottom: 35px;
+}
+@media (max-width: 992px) {
+  #contact .form__container h2 {
+    font-size: 8vw;
+  }
 }
 #contact .form__container span {
   color: #707070;
